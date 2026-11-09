@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <!-- =============================================================== -->
+  <!-- EDIT HERE: PAGE TITLE & META TAGS                               -->
+  <!-- =============================================================== -->
+  <title>Mohith | Engineering Student & AI Portfolio</title>
+  <meta name="description" content="Personal portfolio of Mohith, a first-year B.Tech CSE (AI) student at Thejus Engineering College. Explore skills, projects, and achievements." />
+  <meta name="keywords" content="Mohith, Portfolio, Engineering Student, Computer Science, AI, Python, Web Development, Thejus Engineering College" />
+  <meta name="author" content="Mohith" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <meta name="theme-color" content="#050B2E" />
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohith | Engineering Student & AI Portfolio" />
+  <meta property="og:description" content="Personal portfolio of Mohith, a first-year B.Tech CSE (AI) student at Thejus Engineering College. Explore skills, projects, and achievements." />
+  <meta property="og:image" content="assets/hero-portrait-hd.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mohith | Engineering Student & AI Portfolio" />
+  <meta name="twitter:description" content="Personal portfolio of Mohith, a first-year B.Tech CSE (AI) student at Thejus Engineering College." />
+  <meta name="twitter:image" content="assets/hero-portrait-hd.png" />
+
+  <!-- Google Fonts: Poppins (Clean Sans-Serif) & Caveat (Handwritten Script) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- =============================================================== -->
+  <!-- 1. NAVBAR                                                       -->
+  <!-- =============================================================== -->
+  <header class="navbar-wrapper" id="navbar">
+    <nav class="navbar container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Mohith Portfolio Home">
+        <img src="assets/logo.svg" alt="Mohith Logo" class="logo-icon" width="34" height="28" />
+        <!-- EDIT HERE: YOUR NAME -->
+        <span class="logo-text">Mohith</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Navbar Right Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle (Dark / Light) -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-dark"></i>
+          <i class="fa-solid fa-sun theme-icon-light"></i>
+        </button>
+
+        <!-- EDIT HERE: RESUME DOWNLOAD LINK -->
+        <a href="assets/Mohith_Resume.pdf" class="btn btn-download" download="Mohith_Resume.pdf" aria-label="Download CV">
+          <span>Download CV</span>
+          <i class="fa-solid fa-arrow-down-to-bracket"></i>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="assets/Mohith_Resume.pdf" class="btn btn-download-mobile" download="Mohith_Resume.pdf">
+          <span>Download CV</span>
+          <i class="fa-solid fa-arrow-down-to-bracket"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================= -->
+    <!-- 2. HERO SECTION                                               -->
+    <!-- ============================================================= -->
+    <section class="hero-section" id="home">
+      <!-- Background Ambient Glow & Circular Arc Shapes -->
+      <div class="hero-bg-glow glow-1"></div>
+      <div class="hero-bg-glow glow-2"></div>
+      <div class="hero-arc-ring"></div>
+      
+      <!-- Subtle Circuit Lines Overlay in Hero -->
+      <div class="hero-circuit-accent">
+        <img src="assets/circuit.svg" alt="" aria-hidden="true" />
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Left Column: Bio & Intro -->
+        <div class="hero-content">
+          <div class="hero-greeting-row">
+            <span class="hero-greeting">Hello, I'm</span>
+            <span class="hero-greeting-bar"></span>
+          </div>
+
+          <!-- EDIT HERE: YOUR NAME -->
+          <h1 class="hero-name">
+            Mo<span class="text-blue">hith</span>
+          </h1>
+
+          <!-- Dynamic Typing Subtitle -->
+          <h2 class="hero-title">
+            <span class="typed-text" id="typedRole">Engineering Student</span>
+            <span class="typing-cursor">&nbsp;</span>
+          </h2>
+
+          <!-- EDIT HERE: TAGLINE -->
+          <p class="hero-tagline">
+            Turning Ideas into Innovation through Code and Creativity.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i>
+              <span>Explore My Work</span>
+              <i class="fa-solid fa-arrow-right btn-arrow"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-regular fa-envelope"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Center Handwritten Floating Accent -->
+        <div class="hero-center-slogan">
+          <div class="script-slogan">
+            <span>Dream</span>
+            <span>Code</span>
+            <span>Achieve</span>
+          </div>
+          <img src="assets/swoosh.svg" alt="" class="slogan-swoosh" aria-hidden="true" />
+        </div>
+
+        <!-- Hero Right Column: Photo with Campus Backdrop inside Diagonal Cutout -->
+        <div class="hero-visual">
+          <div class="portrait-frame">
+            <!-- EDIT HERE: YOUR HERO PHOTO in /assets/ -->
+            <img src="assets/hero-portrait-hd.png" alt="Mohith - Engineering Student Portrait" class="hero-photo" id="heroPhoto" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Circular Indicator -->
+      <div class="hero-scroll-wrapper">
+        <a href="#about" class="scroll-down-btn" aria-label="Scroll down to About section">
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </div>
+
+      <!-- Diagonal Divider Transition to light background -->
+      <div class="hero-diagonal-divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 3. ABOUT ME SECTION                                           -->
+    <!-- ============================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container about-container">
+        <!-- About Left: Workspace / Laptop Image -->
+        <div class="about-image-wrapper">
+          <div class="about-image-backdrop"></div>
+          <div class="about-image-card">
+            <!-- EDIT HERE: LAPTOP / WORKSPACE PHOTO -->
+            <img src="assets/about-laptop-full.png" alt="Coding Workspace with Laptop and VS Code" class="about-laptop-img" />
+          </div>
+        </div>
+
+        <!-- About Center: Bio & Tags -->
+        <div class="about-content">
+          <div class="section-title-wrapper">
+            <span class="title-bar"></span>
+            <h2 class="section-title">About <span class="text-blue">Me</span></h2>
+          </div>
+
+          <!-- EDIT HERE: ABOUT PARAGRAPH -->
+          <p class="about-paragraph">
+            I am a first-year B.Tech Computer Science and Engineering (AI) student at Thejus Engineering College with a passion for technology, coding and problem solving. I enjoy learning new skills, building innovative solutions and exploring the world of AI and software development.
+          </p>
+
+          <!-- 3 Icon Tags -->
+          <div class="about-tags">
+            <div class="tag-pill">
+              <i class="fa-solid fa-graduation-cap tag-icon"></i>
+              <span>B.Tech</span>
+            </div>
+            <div class="tag-pill">
+              <i class="fa-solid fa-location-dot tag-icon"></i>
+              <span>India</span>
+            </div>
+            <div class="tag-pill">
+              <i class="fa-solid fa-heart tag-icon"></i>
+              <span>Tech Enthusiast</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vertical Divider -->
+        <div class="about-quote-divider" aria-hidden="true"></div>
+
+        <!-- About Right: Handwritten Quote -->
+        <div class="about-quote-wrapper">
+          <blockquote class="about-script-quote">
+            “Always curious,<br />
+            always learning,<br />
+            always growing.”
+          </blockquote>
+          <img src="assets/swoosh.svg" alt="" class="quote-swoosh" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 4. SKILLS SECTION                                             -->
+    <!-- ============================================================= -->
+    <section class="section skills-section" id="skills">
+      <div class="container skills-container">
+        <!-- Skills Left: Header, Intro & Button -->
+        <div class="skills-intro">
+          <div class="section-title-wrapper">
+            <span class="title-bar"></span>
+            <h2 class="section-title">My <span class="text-blue">Skills</span></h2>
+          </div>
+          <!-- EDIT HERE: SKILLS INTRO -->
+          <p class="section-subtext">
+            A blend of technical and soft skills to build better solutions.
+          </p>
+          <button class="btn btn-primary" id="openSkillsModalBtn" aria-label="View All Skills Modal">
+            <span>View All Skills</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Skills Right: Cards Row -->
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Skill 1: Python -->
+          <div class="skill-card" tabindex="0">
+            <div class="skill-icon-wrapper">
+              <img src="assets/skills/python.svg" alt="Python" class="skill-svg-icon" />
+            </div>
+            <span class="skill-name">Python</span>
+          </div>
+
+          <!-- Skill 2: C++ -->
+          <div class="skill-card" tabindex="0">
+            <div class="skill-icon-wrapper">
+              <img src="assets/skills/cpp.svg" alt="C++" class="skill-svg-icon" />
+            </div>
+            <span class="skill-name">C++</span>
+          </div>
+
+          <!-- Skill 3: Java -->
+          <div class="skill-card" tabindex="0">
+            <div class="skill-icon-wrapper">
+              <img src="assets/skills/java.svg" alt="Java" class="skill-svg-icon" />
+            </div>
+            <span class="skill-name">Java</span>
+          </div>
+
+          <!-- Skill 4: Web Dev -->
+          <div class="skill-card" tabindex="0">
+            <div class="skill-icon-wrapper">
+              <img src="assets/skills/web.svg" alt="Web Dev" class="skill-svg-icon" />
+            </div>
+            <span class="skill-name">Web Dev</span>
+          </div>
+
+          <!-- Skill 5: SQL -->
+          <div class="skill-card" tabindex="0">
+            <div class="skill-icon-wrapper">
+              <img src="assets/skills/sql.svg" alt="SQL" class="skill-svg-icon" />
+            </div>
+            <span class="skill-name">SQL</span>
+          </div>
+
+          <!-- Skill 6: Communication -->
+          <div class="skill-card" tabindex="0">
+            <div class="skill-icon-wrapper">
+              <img src="assets/skills/communication.svg" alt="Communication" class="skill-svg-icon" />
+            </div>
+            <span class="skill-name">Communication</span>
+          </div>
+
+          <!-- Skill 7: Problem Solving -->
+          <div class="skill-card" tabindex="0">
+            <div class="skill-icon-wrapper">
+              <img src="assets/skills/problem-solving.svg" alt="Problem Solving" class="skill-svg-icon" />
+            </div>
+            <span class="skill-name">Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 5. EDUCATION SECTION                                          -->
+    <!-- ============================================================= -->
+    <section class="section education-section" id="education">
+      <div class="container education-container">
+        <!-- Education Left: 3D Graduation Cap Graphic -->
+        <div class="education-graphic">
+          <img src="assets/education-cap.svg" alt="Graduation Cap and Books Illustration" class="education-cap-img" />
+        </div>
+
+        <!-- Education Right: Timeline -->
+        <div class="education-content">
+          <div class="section-title-wrapper">
+            <span class="title-bar"></span>
+            <h2 class="section-title">Education</h2>
+          </div>
+
+          <!-- Horizontal Timeline (converts to vertical on mobile) -->
+          <div class="timeline-container">
+            <div class="timeline-track"></div>
+
+            <!-- Milestone 1 -->
+            <div class="timeline-node">
+              <div class="timeline-dot">
+                <span class="dot-inner"></span>
+              </div>
+              <div class="timeline-info">
+                <!-- EDIT HERE: CLASS 10 -->
+                <h3 class="timeline-title">Class 10 – CBSE</h3>
+                <span class="timeline-score">97%</span>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="timeline-node">
+              <div class="timeline-dot">
+                <span class="dot-inner"></span>
+              </div>
+              <div class="timeline-info">
+                <!-- EDIT HERE: CLASS 12 -->
+                <h3 class="timeline-title">Class 12 – CBSE</h3>
+                <span class="timeline-score">85%</span>
+                <span class="timeline-stream">(PCM)</span>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="timeline-node">
+              <div class="timeline-dot">
+                <span class="dot-inner"></span>
+              </div>
+              <div class="timeline-info">
+                <!-- EDIT HERE: DEGREE -->
+                <h3 class="timeline-title">B.Tech in Computer Science and Engineering (AI)</h3>
+                <span class="timeline-college">Thejus Engineering College</span>
+                <span class="timeline-status">(Expected)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 6. PROJECTS SECTION                                           -->
+    <!-- ============================================================= -->
+    <section class="section projects-section" id="projects">
+      <div class="container projects-container">
+        <!-- Projects Left: Title & Intro -->
+        <div class="projects-intro">
+          <div class="section-title-wrapper">
+            <span class="title-bar"></span>
+            <h2 class="section-title">My <span class="text-blue">Projects</span></h2>
+          </div>
+          <!-- EDIT HERE: PROJECTS SUBTITLE -->
+          <p class="section-subtext">
+            Some of my academic and personal projects.
+          </p>
+          <button class="btn btn-primary" id="openProjectsModalBtn" aria-label="View All Projects Modal">
+            <span>View All Projects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- Projects Right: 3 Project Cards -->
+        <div class="projects-grid">
+          <!-- Project 1: AI Waste Scanner -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/project-ai-waste.svg" alt="AI Waste Scanner neural network diagram" class="project-img" />
+              <div class="project-tag-badge">AI / Vision</div>
+            </div>
+            <div class="project-body">
+              <div class="project-text">
+                <!-- EDIT HERE: PROJECT 1 TITLE & DESC -->
+                <h3 class="project-title">AI Waste Scanner</h3>
+                <p class="project-desc">Smart waste classification using AI</p>
+              </div>
+              <!-- EDIT HERE: PROJECT 1 GITHUB LINK -->
+              <a href="https://github.com/mohith" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="View AI Waste Scanner on GitHub" title="View Project">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: Smart Parking System -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/project-smart-parking.svg" alt="Smart Parking System IoT vehicle detection" class="project-img" />
+              <div class="project-tag-badge">IoT / Hardware</div>
+            </div>
+            <div class="project-body">
+              <div class="project-text">
+                <!-- EDIT HERE: PROJECT 2 TITLE & DESC -->
+                <h3 class="project-title">Smart Parking System</h3>
+                <p class="project-desc">IoT based parking solution</p>
+              </div>
+              <!-- EDIT HERE: PROJECT 2 GITHUB LINK -->
+              <a href="https://github.com/mohith" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="View Smart Parking System on GitHub" title="View Project">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: Portfolio Website -->
+          <article class="project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/project-portfolio.svg" alt="Personal Portfolio Website responsive dashboard" class="project-img" />
+              <div class="project-tag-badge">Web Dev</div>
+            </div>
+            <div class="project-body">
+              <div class="project-text">
+                <!-- EDIT HERE: PROJECT 3 TITLE & DESC -->
+                <h3 class="project-title">Portfolio Website</h3>
+                <p class="project-desc">Personal portfolio website</p>
+              </div>
+              <!-- EDIT HERE: PROJECT 3 GITHUB LINK -->
+              <a href="https://github.com/mohith" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="View Portfolio Website on GitHub" title="View Project">
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 7. ACHIEVEMENTS, CONTACT & THANK YOU (BOTTOM GRID)            -->
+    <!-- ============================================================= -->
+    <section class="section bottom-section" id="achievements">
+      <div class="container bottom-grid-container">
+        <!-- Card 1: Achievements -->
+        <div class="info-card achievements-card">
+          <div class="info-card-header">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <!-- EDIT HERE: ACHIEVEMENTS TITLE -->
+            <h3 class="info-card-title">Achievements</h3>
+          </div>
+
+          <!-- EDIT HERE: ACHIEVEMENTS CHECKLIST -->
+          <ul class="achievements-list">
+            <li class="achievement-item">
+              <i class="fa-solid fa-check check-icon"></i>
+              <span>1st Prize in College Tech Fest</span>
+            </li>
+            <li class="achievement-item">
+              <i class="fa-solid fa-check check-icon"></i>
+              <span>Certificate in Python Programming</span>
+            </li>
+            <li class="achievement-item">
+              <i class="fa-solid fa-check check-icon"></i>
+              <span>Active Member – Maths Club</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Contact Me -->
+        <div class="info-card contact-card" id="contact">
+          <div class="info-card-header">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <!-- EDIT HERE: CONTACT TITLE -->
+            <h3 class="info-card-title">Contact <span class="text-blue">Me</span></h3>
+          </div>
+
+          <p class="contact-subtext">Let's connect! Feel free to reach out.</p>
+
+          <!-- Email Direct Link -->
+          <!-- EDIT HERE: YOUR EMAIL ADDRESS -->
+          <a href="mailto:mohithcs030@gmail.com" class="contact-email-row" title="Click to send an email">
+            <i class="fa-regular fa-envelope email-row-icon"></i>
+            <span class="email-address">mohithcs030@gmail.com</span>
+          </a>
+
+          <!-- Social Icons Row -->
+          <!-- EDIT HERE: YOUR SOCIAL PROFILE LINKS -->
+          <div class="social-links-row">
+            <a href="https://linkedin.com/in/mohith" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/mohith" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://youtube.com/@mohith" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://instagram.com/mohith" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram Profile" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+
+          <!-- Quick Message Trigger Button -->
+          <button class="btn btn-sm btn-outline-blue contact-toggle-form-btn" id="toggleContactFormBtn">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Send Quick Message</span>
+          </button>
+        </div>
+
+        <!-- Card 3: Thank You Dark Navy Diagonal Panel (Matching Reference) -->
+        <div class="thank-you-diagonal-card">
+          <div class="thank-you-content">
+            <h2 class="thank-you-script">Thank You!</h2>
+            <img src="assets/swoosh.svg" alt="" class="footer-swoosh" aria-hidden="true" />
+            <p class="thank-you-sub">for visiting my portfolio</p>
+          </div>
+
+          <!-- Circuit Decoration matching reference -->
+          <div class="thank-you-circuit" aria-hidden="true">
+            <img src="assets/circuit.svg" alt="Circuit decoration" class="circuit-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Contact Form Card (Collapsible) -->
+      <div class="container contact-form-wrapper">
+        <div class="info-card contact-form-card" id="contactFormCard">
+          <div class="info-card-header">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <h3 class="info-card-title">Direct <span class="text-blue">Message</span></h3>
+          </div>
+          
+          <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="senderName" class="form-label">Your Name</label>
+              <input type="text" id="senderName" name="name" class="form-input" placeholder="e.g. Alex Smith" required />
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail" class="form-label">Your Email</label>
+              <input type="email" id="senderEmail" name="email" class="form-input" placeholder="e.g. alex@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="msgSubject" class="form-label">Subject</label>
+              <input type="text" id="msgSubject" name="subject" class="form-input" placeholder="Project Inquiry / Hello" required />
+            </div>
+
+            <div class="form-group">
+              <label for="senderMessage" class="form-label">Message</label>
+              <textarea id="senderMessage" name="message" class="form-input form-textarea" rows="3" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send via Email</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============================================================== -->
+  <!-- 8. FOOTER BASE BAR                                              -->
+  <!-- =============================================================== -->
+  <footer class="footer-wrapper">
+    <div class="container footer-bottom-bar">
+      <!-- EDIT HERE: COPYRIGHT YEAR AND NAME -->
+      <p class="copyright-text">
+        &copy; 2026 Mohith. All rights reserved.
+      </p>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a href="#home" class="back-to-top-btn" aria-label="Back to Top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- =============================================================== -->
+  <!-- MODAL: VIEW ALL SKILLS                                          -->
+  <!-- =============================================================== -->
+  <div class="modal-overlay" id="skillsModal" aria-hidden="true" role="dialog" aria-labelledby="skillsModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="section-title-wrapper">
+          <span class="title-bar"></span>
+          <h2 class="section-title" id="skillsModalTitle">All <span class="text-blue">Skills</span> &amp; Tools</h2>
+        </div>
+        <button class="modal-close-btn" id="closeSkillsModalBtn" aria-label="Close skills dialog">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Category 1: Programming Languages -->
+        <div class="skill-category">
+          <h3 class="category-heading"><i class="fa-solid fa-code text-blue"></i> Programming Languages</h3>
+          <div class="modal-skills-list">
+            <div class="modal-skill-item">
+              <div class="skill-label-row">
+                <span class="skill-tag-name"><img src="assets/skills/python.svg" alt="" width="18" /> Python</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="modal-skill-item">
+              <div class="skill-label-row">
+                <span class="skill-tag-name"><img src="assets/skills/cpp.svg" alt="" width="18" /> C++</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="modal-skill-item">
+              <div class="skill-label-row">
+                <span class="skill-tag-name"><img src="assets/skills/java.svg" alt="" width="18" /> Java</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Web & Database -->
+        <div class="skill-category">
+          <h3 class="category-heading"><i class="fa-solid fa-database text-blue"></i> Web &amp; Database</h3>
+          <div class="modal-skills-list">
+            <div class="modal-skill-item">
+              <div class="skill-label-row">
+                <span class="skill-tag-name"><img src="assets/skills/web.svg" alt="" width="18" /> HTML5 / CSS3 / JavaScript</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="modal-skill-item">
+              <div class="skill-label-row">
+                <span class="skill-tag-name"><img src="assets/skills/sql.svg" alt="" width="18" /> SQL / MySQL</span>
+                <span class="skill-percentage">82%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 82%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: AI & Soft Skills -->
+        <div class="skill-category">
+          <h3 class="category-heading"><i class="fa-solid fa-brain text-blue"></i> AI &amp; Professional Skills</h3>
+          <div class="pill-badge-cloud">
+            <span class="cloud-pill">Artificial Intelligence</span>
+            <span class="cloud-pill">Machine Learning Fundamentals</span>
+            <span class="cloud-pill">Data Structures &amp; Algorithms</span>
+            <span class="cloud-pill">Problem Solving</span>
+            <span class="cloud-pill">Team Collaboration</span>
+            <span class="cloud-pill">Public Speaking</span>
+            <span class="cloud-pill">Git &amp; GitHub</span>
+            <span class="cloud-pill">Linux Basics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================================== -->
+  <!-- MODAL: VIEW ALL PROJECTS                                        -->
+  <!-- =============================================================== -->
+  <div class="modal-overlay" id="projectsModal" aria-hidden="true" role="dialog" aria-labelledby="projectsModalTitle">
+    <div class="modal-card modal-card-large">
+      <div class="modal-header">
+        <div class="section-title-wrapper">
+          <span class="title-bar"></span>
+          <h2 class="section-title" id="projectsModalTitle">All <span class="text-blue">Projects</span> &amp; Innovations</h2>
+        </div>
+        <button class="modal-close-btn" id="closeProjectsModalBtn" aria-label="Close projects dialog">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-projects-grid">
+          <!-- Full Card 1 -->
+          <div class="modal-project-card">
+            <img src="assets/project-ai-waste.svg" alt="AI Waste Scanner" class="modal-project-img" />
+            <div class="modal-project-body">
+              <span class="modal-project-tag">Computer Vision &bull; Python</span>
+              <h4 class="modal-project-title">AI Waste Scanner</h4>
+              <p class="modal-project-desc">
+                An intelligent image classification model that recognizes organic, recyclable, and hazardous waste in real-time using deep learning, helping automate waste sorting.
+              </p>
+              <div class="modal-project-links">
+                <a href="https://github.com/mohith" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Card 2 -->
+          <div class="modal-project-card">
+            <img src="assets/project-smart-parking.svg" alt="Smart Parking System" class="modal-project-img" />
+            <div class="modal-project-body">
+              <span class="modal-project-tag">IoT &bull; Arduino &bull; Sensors</span>
+              <h4 class="modal-project-title">Smart Parking System</h4>
+              <p class="modal-project-desc">
+                An automated IoT parking management system with ultrasonic sensors and real-time bay availability status displayed on a web dashboard to eliminate traffic congestion.
+              </p>
+              <div class="modal-project-links">
+                <a href="https://github.com/mohith" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Card 3 -->
+          <div class="modal-project-card">
+            <img src="assets/project-portfolio.svg" alt="Personal Portfolio Website" class="modal-project-img" />
+            <div class="modal-project-body">
+              <span class="modal-project-tag">HTML5 &bull; CSS3 &bull; JavaScript</span>
+              <h4 class="modal-project-title">Personal Portfolio Website</h4>
+              <p class="modal-project-desc">
+                A pixel-faithful, responsive, single-page portfolio engineered with modern animations, glassmorphism, responsive timelines, and dark/light mode toggle.
+              </p>
+              <div class="modal-project-links">
+                <a href="https://github.com/mohith" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fa-brands fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+

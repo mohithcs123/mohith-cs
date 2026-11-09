@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 40" fill="none">
+  <defs>
+    <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+  </defs>
+  <!-- Stylized M ribbon/polygons -->
+  <path d="M4 36 L12 4 L22 24 L16 36 Z" fill="url(#logoGrad1)" />
+  <path d="M19 18 L26 4 L44 36 L34 36 L27 24 Z" fill="url(#logoGrad2)" />
+  <path d="M22 24 L27 24 L20 36 L16 36 Z" fill="#60A5FA" opacity="0.8" />
+</svg>
+

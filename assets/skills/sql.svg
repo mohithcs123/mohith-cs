@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <g fill="#2563EB">
+    <!-- Top cylinder -->
+    <ellipse cx="64" cy="30" rx="36" ry="12"/>
+    <!-- Middle tier 1 -->
+    <path d="M 28 30 V 50 C 28 58 44 64 64 64 C 84 64 100 58 100 50 V 30 C 96 39 82 45 64 45 C 46 45 32 39 28 30 Z" opacity="0.9"/>
+    <!-- Middle tier 2 -->
+    <path d="M 28 55 V 75 C 28 83 44 89 64 89 C 84 89 100 83 100 75 V 55 C 96 64 82 70 64 70 C 46 70 32 64 28 55 Z" opacity="0.85"/>
+    <!-- Bottom tier 3 -->
+    <path d="M 28 80 V 98 C 28 106 44 112 64 112 C 84 112 100 106 100 98 V 80 C 96 89 82 95 64 95 C 46 95 32 89 28 80 Z"/>
+  </g>
+</svg>

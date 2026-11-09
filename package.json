@@ -1,0 +1,17 @@
+{
+  "name": "mohith-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Mohith",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "mohith",
+    "engineering"
+  ],
+  "author": "Mohith",
+  "license": "ISC"
+}

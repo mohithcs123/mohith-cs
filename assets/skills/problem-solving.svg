@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" stroke="#2563EB" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Radiating Rays -->
+  <line x1="64" y1="12" x2="64" y2="22" stroke-width="6"/>
+  <line x1="30" y1="28" x2="38" y2="36" stroke-width="6"/>
+  <line x1="98" y1="28" x2="90" y2="36" stroke-width="6"/>
+  <line x1="16" y1="60" x2="26" y2="60" stroke-width="6"/>
+  <line x1="112" y1="60" x2="102" y2="60" stroke-width="6"/>
+  
+  <!-- Bulb Outline -->
+  <path d="M 44 80 C 34 72 32 54 40 42 C 48 30 64 26 78 34 C 88 42 92 56 84 70 C 80 76 76 80 76 86 L 52 86 C 52 82 48 76 44 80 Z" stroke-width="6" fill="#EFF6FF"/>
+  
+  <!-- Filament -->
+  <path d="M 54 84 L 54 60 C 54 54 74 54 74 60 L 74 84" stroke-width="5"/>
+  
+  <!-- Base screw lines -->
+  <line x1="53" y1="94" x2="75" y2="94" stroke-width="6"/>
+  <line x1="56" y1="102" x2="72" y2="102" stroke-width="6"/>
+  <path d="M 59 110 C 62 113 66 113 69 110" stroke-width="5"/>
+</svg>

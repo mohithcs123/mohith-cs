@@ -24,9 +24,9 @@ if not exist ".firebaserc" (
 )
 
 echo.
-echo [3/3] Deploying your website to Firebase Hosting...
+echo [3/3] Deploying your website to Firebase Hosting (Project: mohith-cs-eb738)...
 echo.
-call firebase deploy --only hosting
+call firebase deploy --only hosting --project mohith-cs-eb738
 
 echo.
 if %ERRORLEVEL% equ 0 (

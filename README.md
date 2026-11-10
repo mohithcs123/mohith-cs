@@ -127,6 +127,12 @@ Every file has clear `<!-- EDIT HERE: ... -->` comments so you can easily custom
 2. Simply drag and drop your `mohith cs` folder into the upload box.
 3. Your site is live instantly with free SSL! You can customize your subdomain (e.g. `mohith-portfolio.netlify.app`).
 
+### Option C: Deploy with Firebase Hosting (Google Cloud)
+1. Create a free project at [Firebase Console](https://console.firebase.google.com).
+2. Double-click `deploy-firebase.bat` in your folder (or run `firebase deploy --only hosting` in terminal).
+3. Sign in with your Google account when prompted.
+4. Your site will be live instantly with global CDN & free SSL at `https://<your-project-id>.web.app`!
+
 ---
 
 ## 🛠️ Local Preview Options

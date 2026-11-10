@@ -290,5 +290,78 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  // ============================================================================
+  // 8. HERO VISUAL VIEW SWITCHER (3D SPLINE DRONE vs PORTRAIT PHOTO)
+  // ============================================================================
+  const show3dBtn = document.getElementById('show3dBtn');
+  const showPhotoBtn = document.getElementById('showPhotoBtn');
+  const splinePanel = document.getElementById('splinePanel');
+  const photoPanel = document.getElementById('photoPanel');
+  const heroVisualFrame = document.getElementById('heroVisualFrame');
+  const splineFullscreenBtn = document.getElementById('splineFullscreenBtn');
+
+  function switchHeroView(target) {
+    if (target === 'spline') {
+      if (show3dBtn) {
+        show3dBtn.classList.add('active');
+        show3dBtn.setAttribute('aria-selected', 'true');
+      }
+      if (showPhotoBtn) {
+        showPhotoBtn.classList.remove('active');
+        showPhotoBtn.setAttribute('aria-selected', 'false');
+      }
+      if (splinePanel) splinePanel.classList.add('active');
+      if (photoPanel) photoPanel.classList.remove('active');
+    } else if (target === 'photo') {
+      if (showPhotoBtn) {
+        showPhotoBtn.classList.add('active');
+        showPhotoBtn.setAttribute('aria-selected', 'true');
+      }
+      if (show3dBtn) {
+        show3dBtn.classList.remove('active');
+        show3dBtn.setAttribute('aria-selected', 'false');
+      }
+      if (photoPanel) photoPanel.classList.add('active');
+      if (splinePanel) splinePanel.classList.remove('active');
+    }
+  }
+
+  if (show3dBtn) {
+    show3dBtn.addEventListener('click', () => switchHeroView('spline'));
+  }
+
+  if (showPhotoBtn) {
+    showPhotoBtn.addEventListener('click', () => switchHeroView('photo'));
+  }
+
+  // Fullscreen 3D Drone toggle
+  if (splineFullscreenBtn && heroVisualFrame) {
+    splineFullscreenBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!document.fullscreenElement) {
+        if (heroVisualFrame.requestFullscreen) {
+          heroVisualFrame.requestFullscreen();
+        } else if (heroVisualFrame.webkitRequestFullscreen) {
+          heroVisualFrame.webkitRequestFullscreen();
+        } else if (heroVisualFrame.msRequestFullscreen) {
+          heroVisualFrame.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+      const isFull = !!document.fullscreenElement;
+      const icon = splineFullscreenBtn.querySelector('i');
+      if (icon) {
+        icon.className = isFull ? 'fa-solid fa-compress' : 'fa-solid fa-expand';
+      }
+    });
+  }
+
 });
 

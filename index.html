@@ -184,14 +184,27 @@
           <img src="assets/swoosh.svg" alt="" class="slogan-swoosh glow-swoosh" aria-hidden="true" />
         </div>
 
-        <!-- Hero Right Column: Mohith's Portrait with Modern Overlay & Floating Badges -->
+        <!-- Hero Right Column: Interactive 3D Spline Drone & Portrait Switcher -->
         <div class="hero-visual">
           <div class="portrait-container">
+            <!-- Mode Switcher: 3D AI Drone / Profile Photo -->
+            <div class="hero-view-toggle-bar" role="tablist" aria-label="Hero visual view switcher">
+              <button class="view-toggle-btn active" id="show3dBtn" data-target="spline" role="tab" aria-selected="true" aria-controls="splinePanel" title="View Interactive 3D Drone">
+                <i class="fa-solid fa-cube"></i>
+                <span>3D AI Drone</span>
+                <span class="pulse-indicator" aria-hidden="true"></span>
+              </button>
+              <button class="view-toggle-btn" id="showPhotoBtn" data-target="photo" role="tab" aria-selected="false" aria-controls="photoPanel" title="View Profile Photo">
+                <i class="fa-solid fa-id-badge"></i>
+                <span>Profile</span>
+              </button>
+            </div>
+
             <!-- Ambient Glowing Ring behind frame -->
             <div class="portrait-glow-ring" aria-hidden="true"></div>
 
-            <!-- Main Portrait Frame -->
-            <div class="portrait-frame">
+            <!-- Main Interactive Display Frame -->
+            <div class="portrait-frame" id="heroVisualFrame">
               <!-- Corner Cyber HUD Accents -->
               <div class="portrait-hud" aria-hidden="true">
                 <span class="hud-corner top-left"></span>
@@ -200,28 +213,58 @@
                 <span class="hud-corner bottom-right"></span>
               </div>
 
-              <!-- Profile Image -->
-              <!-- EDIT HERE: YOUR HERO PHOTO in /assets/ -->
-              <img src="assets/mohith.jpeg" alt="Mohith - Engineering Student Portrait" class="hero-photo" id="heroPhoto" />
+              <!-- VIEW 1: Spline 3D Drone Component (Active by default) -->
+              <div class="visual-panel panel-spline active" id="splinePanel" role="tabpanel" aria-labelledby="show3dBtn">
+                <div class="spline-wrapper">
+                  <iframe 
+                    src="https://my.spline.design/aiassisteddrone3dmodel-U7f1L6Sh3jCeYvWrBCfUNHKL/" 
+                    frameborder="0" 
+                    width="100%" 
+                    height="100%"
+                    class="spline-iframe"
+                    title="Interactive AI Assisted Drone 3D Model"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+                  </iframe>
 
-              <!-- Overlay Layers (Vignette, Gradient, Scanline) -->
-              <div class="portrait-overlay" aria-hidden="true">
-                <div class="overlay-gradient"></div>
-                <div class="overlay-vignette"></div>
-                <div class="overlay-scanline"></div>
+                  <!-- Interactive HUD Hint Overlay -->
+                  <div class="spline-hud-hint" aria-hidden="true">
+                    <i class="fa-solid fa-arrows-spin"></i>
+                    <span>Interactive 3D &bull; Drag to rotate drone</span>
+                  </div>
+
+                  <!-- Fullscreen / Expand Button -->
+                  <button class="spline-fullscreen-btn" id="splineFullscreenBtn" title="Fullscreen 3D View" aria-label="Fullscreen 3D View">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
               </div>
 
-              <!-- Bottom Glass Badge -->
-              <div class="portrait-badge">
-                <span class="status-pulse-dot"></span>
-                <div class="badge-text-group">
-                  <span class="badge-name">Mohith</span>
-                  <span class="badge-role">B.Tech CSE (AI) &bull; Thejus</span>
+              <!-- VIEW 2: Mohith's Portrait Photo with Modern Overlay -->
+              <div class="visual-panel panel-photo" id="photoPanel" role="tabpanel" aria-labelledby="showPhotoBtn">
+                <!-- Profile Image -->
+                <!-- EDIT HERE: YOUR HERO PHOTO in /assets/ -->
+                <img src="assets/mohith.jpeg" alt="Mohith - Engineering Student Portrait" class="hero-photo" id="heroPhoto" />
+
+                <!-- Overlay Layers (Vignette, Gradient, Scanline) -->
+                <div class="portrait-overlay" aria-hidden="true">
+                  <div class="overlay-gradient"></div>
+                  <div class="overlay-vignette"></div>
+                  <div class="overlay-scanline"></div>
+                </div>
+
+                <!-- Bottom Glass Badge -->
+                <div class="portrait-badge">
+                  <span class="status-pulse-dot"></span>
+                  <div class="badge-text-group">
+                    <span class="badge-name">Mohith</span>
+                    <span class="badge-role">B.Tech CSE (AI) &bull; Thejus</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Floating Glassmorphic Badges around portrait -->
+            <!-- Floating Glassmorphic Badges around frame -->
             <div class="floating-tech-card float-badge-1">
               <i class="fa-solid fa-brain text-cyan"></i>
               <span>AI &amp; Machine Learning</span>

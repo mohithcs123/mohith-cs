@@ -136,26 +136,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ============================================================================
-  // 4. THEME TOGGLE (DARK / LIGHT MODE)
+  // 4. THEME TOGGLE (DARK / LIGHT MODE WITH MICRO-INTERACTIONS)
   // Saved to localStorage so visitor preference persists across reloads
   // ============================================================================
   const themeToggle = document.getElementById('themeToggle');
   const savedTheme = localStorage.getItem('mohith-portfolio-theme');
 
+  // Initialize theme state (dark by default matching the reference style)
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      if (themeToggle) themeToggle.setAttribute('aria-checked', 'true');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      if (themeToggle) themeToggle.setAttribute('aria-checked', 'false');
+    }
+  }
+
+  // Check saved theme
   if (savedTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    applyTheme(true);
+  } else if (savedTheme === 'light') {
+    applyTheme(false);
+  } else {
+    // Default to dark mode matching original design aesthetic
+    applyTheme(true);
   }
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      if (currentTheme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('mohith-portfolio-theme', 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('mohith-portfolio-theme', 'dark');
-      }
+      const isCurrentlyDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const willBeDark = !isCurrentlyDark;
+      applyTheme(willBeDark);
+      localStorage.setItem('mohith-portfolio-theme', willBeDark ? 'dark' : 'light');
     });
   }
 

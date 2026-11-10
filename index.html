@@ -126,6 +126,11 @@
       <div class="container hero-container">
         <!-- Hero Left Column: Bio & Intro -->
         <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="pulse-green-dot"></span>
+            <span class="status-pill-text">Available for Projects &amp; Tech Collabs</span>
+          </div>
+
           <div class="hero-greeting-row">
             <span class="hero-greeting">Hello, I'm</span>
             <span class="hero-greeting-bar"></span>
@@ -133,7 +138,7 @@
 
           <!-- EDIT HERE: YOUR NAME -->
           <h1 class="hero-name">
-            Mo<span class="text-blue">hith</span>
+            Mo<span class="text-blue-gradient">hith</span>
           </h1>
 
           <!-- Dynamic Typing Subtitle -->
@@ -149,12 +154,12 @@
 
           <!-- Hero Action Buttons -->
           <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">
+            <a href="#projects" class="btn btn-primary btn-glow">
               <i class="fa-solid fa-rocket"></i>
               <span>Explore My Work</span>
               <i class="fa-solid fa-arrow-right btn-arrow"></i>
             </a>
-            <a href="#contact" class="btn btn-outline">
+            <a href="#contact" class="btn btn-outline btn-glass">
               <i class="fa-regular fa-envelope"></i>
               <span>Contact Me</span>
             </a>
@@ -163,22 +168,60 @@
 
         <!-- Hero Center Handwritten Floating Accent -->
         <div class="hero-center-slogan">
-          <div class="script-slogan">
+          <div class="script-slogan neon-glow">
             <span>Dream</span>
             <span>Code</span>
             <span>Achieve</span>
           </div>
-          <img src="assets/swoosh.svg" alt="" class="slogan-swoosh" aria-hidden="true" />
+          <img src="assets/swoosh.svg" alt="" class="slogan-swoosh glow-swoosh" aria-hidden="true" />
         </div>
 
-        <!-- Hero Right Column: Mohith's Portrait -->
+        <!-- Hero Right Column: Mohith's Portrait with Modern Overlay & Floating Badges -->
         <div class="hero-visual">
-          <div class="portrait-frame">
-            <!-- EDIT HERE: YOUR HERO PHOTO in /assets/ -->
-            <img src="assets/mohith.jpeg" alt="Mohith - Engineering Student Portrait" class="hero-photo" id="heroPhoto" />
-            <div class="portrait-badge">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <span>B.Tech CSE (AI)</span>
+          <div class="portrait-container">
+            <!-- Ambient Glowing Ring behind frame -->
+            <div class="portrait-glow-ring" aria-hidden="true"></div>
+
+            <!-- Main Portrait Frame -->
+            <div class="portrait-frame">
+              <!-- Corner Cyber HUD Accents -->
+              <div class="portrait-hud" aria-hidden="true">
+                <span class="hud-corner top-left"></span>
+                <span class="hud-corner top-right"></span>
+                <span class="hud-corner bottom-left"></span>
+                <span class="hud-corner bottom-right"></span>
+              </div>
+
+              <!-- Profile Image -->
+              <!-- EDIT HERE: YOUR HERO PHOTO in /assets/ -->
+              <img src="assets/mohith.jpeg" alt="Mohith - Engineering Student Portrait" class="hero-photo" id="heroPhoto" />
+
+              <!-- Overlay Layers (Vignette, Gradient, Scanline) -->
+              <div class="portrait-overlay" aria-hidden="true">
+                <div class="overlay-gradient"></div>
+                <div class="overlay-vignette"></div>
+                <div class="overlay-scanline"></div>
+              </div>
+
+              <!-- Bottom Glass Badge -->
+              <div class="portrait-badge">
+                <span class="status-pulse-dot"></span>
+                <div class="badge-text-group">
+                  <span class="badge-name">Mohith</span>
+                  <span class="badge-role">B.Tech CSE (AI) &bull; Thejus</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Glassmorphic Badges around portrait -->
+            <div class="floating-tech-card float-badge-1">
+              <i class="fa-solid fa-brain text-cyan"></i>
+              <span>AI &amp; Machine Learning</span>
+            </div>
+
+            <div class="floating-tech-card float-badge-2">
+              <i class="fa-solid fa-code text-blue"></i>
+              <span>Python &bull; C++ &bull; Web</span>
             </div>
           </div>
         </div>
